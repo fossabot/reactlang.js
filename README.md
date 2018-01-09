@@ -38,6 +38,33 @@ Will render the following:
 <span>Hello, world!</span>
 ```
 
+#### With children
+
+```js
+const lang = {
+    common: {
+        first_name: 'First name'
+    }
+};
+
+<Translatable
+    lang={lang}
+    attributes={{
+        placeholder: {
+            transKey: 'common.first_name'
+        }
+    }}
+>
+    <input type="text" />
+</Translatable>
+```
+
+Will render the following:
+
+```html
+<input type="text" placeholder="First name" />
+```
+
 ### Messages source format
 
 The messages source format should look like the following:
