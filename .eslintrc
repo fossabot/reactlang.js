@@ -43,6 +43,8 @@
         "no-unsafe-negation": "off"
     },
     "globals": {
-        "window": false
+        "window": false,
+        "module": false,
+        "__dirname": false
     }
 }

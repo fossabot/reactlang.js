@@ -2,10 +2,14 @@
     "env": {
         "test": {
             "presets": [
-                "env",
+                "es2015",
+                "stage-0",
                 "react"
             ],
-            "plugins": ["transform-runtime"]
+            "plugins": [
+                "transform-runtime",
+                "transform-class-properties"
+            ]
         }
     },
     "presets": [
@@ -15,7 +19,12 @@
                 "modules": false
             }
         ],
+        "es2015",
+        "stage-0",
         "react"
     ],
-    "plugins": ["transform-class-properties"]
+    "plugins": [
+        "syntax-jsx",
+        "transform-class-properties"
+    ]
 }
