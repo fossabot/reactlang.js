@@ -1,4 +1,4 @@
-![reactlang.js – React.js localization component highly inspired by Laravel's Lang.](banner.jpg)
+![reactlang.js – React.js localization component based on Laravel's Lang and integrating Lang.js.](banner.jpg)
 
 [![Build Status](https://travis-ci.org/amogower/reactlang.js.svg)](https://travis-ci.org/amogower/reactlang.js)
 ![Laravel 5.5](https://img.shields.io/badge/Laravel-5.5-f4645f.svg)
