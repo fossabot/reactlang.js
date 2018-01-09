@@ -9,8 +9,8 @@
 
 Different installation methods:
 
+ - Yarn: `yarn add reactlang.js`
  - NPM: `npm install reactlang.js`
- - Bower: `bower install reactlang.js`
  - Manually: [Download latest release](https://github.com/amogower/reactlang.js/releases/latest)
 
 ## Documentation
