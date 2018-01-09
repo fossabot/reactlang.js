@@ -1,0 +1,48 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "env": {
+        "browser": true,
+        "jest": true
+    },
+    "plugins": [
+        "babel",
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "generators": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "quotes": [2, "single", { "allowTemplateLiterals": true }],
+        "no-magic-numbers": "off",
+        "func-style": "off",
+        "arrow-parens": "off",
+        "no-use-before-define": "off",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-indent-props": ["warn", 4],
+        "react/require-extension": "off",
+        "react/no-multi-comp": "warn",
+        "react/prop-types": "warn",
+        "react/sort-comp": "warn",
+        "react/sort-prop-types": "warn",
+        "react/jsx-no-bind": "warn",
+        "react/no-unused-prop-types": 1,
+        "filenames/match-regex": "off",
+        "no-unsafe-negation": "off"
+    },
+    "globals": {
+        "window": false
+    }
+}

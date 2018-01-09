@@ -133,6 +133,25 @@ An object with element attributes as keys with object values containing the same
 }
 ```
 
+#### `id` (Optional)
+
+An id to be applied to the span rendered by the component when no children are present.
+
+#### `className` (Optional)
+
+A class name string.
+
+#### `handleError` (Optional)
+
+A function for handling errors.  Receives an object like the following:
+
+```js
+{
+    message: 'The Translatable component only allows a single child',
+    name: 'Too many children'
+}
+```
+
 ## Development
 
  1. Fork this repository and clone it.
