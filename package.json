@@ -1,0 +1,44 @@
+{
+  "name": "reactlang.js",
+  "version": "1.0.0",
+  "description": "React.js localization component highly inspired by Laravel's Lang",
+  "author": {
+    "name": "amogower",
+    "email": "amogower@gmail.com",
+    "url": "https://github.com/amogower"
+  },
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amogower/reactlang.js"
+  },
+  "bugs": {
+    "url": "https://github.com/amogower/reactlang.js/issues"
+  },
+  "license": "Apache 2.0",
+  "keywords": [
+    "React",
+    "Laravel",
+    "Lang",
+    "Lang.js",
+    "language",
+    "translation",
+    "react-component",
+    "recompose",
+    "hoc"
+  ],
+  "scripts": {},
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "verbose": true
+  }
+}
