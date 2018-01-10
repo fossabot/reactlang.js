@@ -1,29 +1,23 @@
 
-import React, { Component } from 'react';
-import { func, node, number, object, objectOf, oneOfType, shape, string } from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import TranslationHelper from './TranslationHelper';
 
-export default class Translatable extends Component {
-    static propTypes = {
-        attributes: object,
-        children: node,
-        className: string,
-        content: shape({
-            transKey: string.isRequired,
-            count: number,
-            replacements: objectOf(oneOfType([string, number]))
-        }),
-        handleError: func.isRequired,
-        id: oneOfType([number, string]),
-        lang: objectOf(object).isRequired
+class Translatable extends React.Component {
+    constructor(props) {
+        super(props);
+        this.langHelper = new TranslationHelper({
+            messages: props.lang
+        });
+        this.applyPropsAndContentToChildren = this.applyPropsAndContentToChildren.bind(this);
+        this.handleAttributes = this.handleAttributes.bind(this);
+        this.handleNestedAttributes = this.handleNestedAttributes.bind(this);
+        this.mungeString = this.mungeString.bind(this);
+        this.removeUnwantedProps = this.removeUnwantedProps.bind(this);
     }
 
-    langHelper = new TranslationHelper({
-        messages: this.props.lang
-    })
-
-    applyPropsAndContentToChildren = (props, content = null) => {
+    applyPropsAndContentToChildren(props, content = null) {
         return React.Children.map(this.props.children, child => {
             const propsToApply = {
                 ...child.props,
@@ -62,7 +56,7 @@ export default class Translatable extends Component {
         });
     }
 
-    handleAttributes = props => {
+    handleAttributes(props) {
         const newProps = { ...props };
         for (const key in newProps.attributes) {
             const attribute = newProps.attributes[key];
@@ -74,7 +68,7 @@ export default class Translatable extends Component {
         return newProps;
     }
 
-    handleNestedAttributes = props => {
+    handleNestedAttributes(props) {
         const newProps = { ...props };
         for (const key in newProps.nestedAttributes) {
             const nestedAttribute = newProps.nestedAttributes[key];
@@ -92,7 +86,7 @@ export default class Translatable extends Component {
         return newProps;
     }
 
-    mungeString = ({ transKey, count, replacements }) => {
+    mungeString({ transKey, count, replacements }) {
         if (typeof count !== 'undefined' && typeof replacements !== 'undefined') {
             return this.langHelper.choice(transKey, count, replacements);
         } else if (typeof count === 'undefined' && typeof replacements !== 'undefined') {
@@ -108,7 +102,7 @@ export default class Translatable extends Component {
         return this.langHelper.get(transKey);
     }
 
-    removeUnwantedStoreProps = () => {
+    removeUnwantedProps() {
         const props = { ...this.props };
         delete props.store;
         delete props.storeSubscription;
@@ -128,7 +122,7 @@ export default class Translatable extends Component {
                 throw new Error('The Translatable component only allows a single child');
             }
         }
-        let props = this.removeUnwantedStoreProps();
+        let props = this.removeUnwantedProps();
         const content = props.content;
         delete props.content;
         delete props.handleError;
@@ -161,3 +155,19 @@ export default class Translatable extends Component {
         );
     }
 }
+
+Translatable.propTypes = {
+    attributes: PropTypes.object,
+    children: PropTypes.node,
+    className: PropTypes.string,
+    content: PropTypes.shape({
+        transKey: PropTypes.string.isRequired,
+        count: PropTypes.number,
+        replacements: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number]))
+    }),
+    handleError: PropTypes.func,
+    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    lang: PropTypes.objectOf(PropTypes.object).isRequired
+};
+
+export default Translatable;

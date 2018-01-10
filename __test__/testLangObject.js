@@ -2,8 +2,9 @@
 const langObject = {
     common: {
         cancel: 'Cancel',
-        free: 'Free',
         finish: 'Finish',
+        first_name: 'First name',
+        free: 'Free',
         help: 'Help',
         home: 'Home',
         login: 'Login',

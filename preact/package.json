@@ -1,0 +1,5 @@
+{
+  "main": "dist/reactlang.js.cjs.js",
+  "jsnext:main": "dist/reactlang.js.esm.js",
+  "module": "dist/reactlang.js.esm.js"
+}

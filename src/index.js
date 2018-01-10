@@ -1,6 +1,6 @@
 
-import Translatable from './Translatable.jsx';
+import Translatable from './Translatable';
 
-export {
-    Translatable
-};
+export default Translatable;
+
+// export { default as withRedux } from './withRedux';

@@ -18,4 +18,11 @@ describe('>>> TranslationHelper', () => {
             .toEqual('Bobbins');
     });
 
+    it('should return the translation with replacements', () => {
+        const replacements = {
+            number: 5
+        };
+        expect(translationHelper.choice('common.people_count', 5, replacements)).toEqual('5 people');
+    });
+
 });

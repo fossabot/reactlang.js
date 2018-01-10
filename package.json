@@ -7,7 +7,9 @@
     "email": "amogower@gmail.com",
     "url": "https://github.com/amogower"
   },
-  "main": "dist/index.js",
+  "main": "dist/reactlang.js.cjs.js",
+  "jsnext:main": "dist/reactlang.js.esm.js",
+  "module": "dist/reactlang.js.esm.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/amogower/reactlang.js"
@@ -41,18 +43,18 @@
     "verbose": true
   },
   "dependencies": {
-    "lang.js": "^1.1.12",
-    "prop-types": "^15.6.0"
+    "lang.js": "^1.1.12"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.15.0",
     "eslint-config-formidable": "^3.0.0",
     "eslint-plugin-babel": "^4.1.2",
@@ -61,13 +63,21 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
     "jest": "^22.0.5",
-    "webpack": "^3.10.0"
+    "kcd-scripts": "^0.32.0",
+    "preact": "^8.2.7",
+    "preact-render-to-string": "^3.7.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "scripts": {
     "test": "export NODE_ENV=test && jest",
     "test:coverage": "export NODE_ENV=test && jest --coverage",
     "test:watch": "export NODE_ENV=test && jest --watch",
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "kcd-scripts build --bundle --p-react"
+  },
+  "peerDependencies": {
+    "react-redux": "^5.0.6"
   }
 }
