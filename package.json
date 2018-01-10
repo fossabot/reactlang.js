@@ -1,6 +1,6 @@
 {
   "name": "reactlang.js",
-  "version": "1.0.0",
+  "version": "1.0.13",
   "description": "React.js localization component highly inspired by Laravel's Lang",
   "author": {
     "name": "amogower",
