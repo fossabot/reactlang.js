@@ -157,7 +157,7 @@ A function for handling errors.  Receives an object like the following:
 
  1. Fork this repository and clone it.
  2. Create a branch from develop: `git checkout -b feature/xxxxxxx`
- 3. Submit a PR to be merge into develop branch.
+ 3. Submit a PR to be merged into develop branch.
 
 ## Testing
 
