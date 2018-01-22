@@ -165,3 +165,5 @@ To run the tests use the following commands:
 
  - Single run: `npm run test`
  - Run on changes: `npm run test:watch`
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Famogower%2Freactlang.js.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Famogower%2Freactlang.js?ref=badge_large)
