@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/amogower/reactlang.js.svg)](https://travis-ci.org/amogower/reactlang.js)
 [![npm version](https://badge.fury.io/js/reactlang.js.svg)](https://badge.fury.io/js/reactlang.js)
+[![codecov](https://codecov.io/gh/amogower/reactlang.js/branch/master/graph/badge.svg)](https://codecov.io/gh/amogower/reactlang.js)
 ![Laravel 5.5](https://img.shields.io/badge/Laravel-5.5-f4645f.svg)
 ![Laravel 5.0](https://img.shields.io/badge/Laravel-5.0-f4645f.svg)
 [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](https://raw.githubusercontent.com/amogower/reactlang.js/master/LICENSE)
