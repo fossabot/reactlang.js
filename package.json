@@ -34,6 +34,8 @@
     "hoc"
   ],
   "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     },
@@ -75,8 +77,8 @@
     "react-dom": "^16.2.0"
   },
   "scripts": {
-    "test": "export NODE_ENV=test && jest",
-    "test:coverage": "export NODE_ENV=test && jest --coverage",
+    "test": "export NODE_ENV=test && jest && codecov",
+    "test:coverage": "export NODE_ENV=test && jest --coverage && codecov",
     "test:watch": "export NODE_ENV=test && jest --watch",
     "start": "webpack --watch",
     "build": "kcd-scripts build --bundle --p-react"
