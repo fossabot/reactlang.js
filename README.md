@@ -1,4 +1,5 @@
 ![reactlang.js – React.js localization component based on Laravel's Lang and integrating Lang.js.](banner.jpg)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Famogower%2Freactlang.js.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Famogower%2Freactlang.js?ref=badge_shield)
 
 [![Build Status](https://travis-ci.org/amogower/reactlang.js.svg)](https://travis-ci.org/amogower/reactlang.js)
 [![npm version](https://badge.fury.io/js/reactlang.js.svg)](https://badge.fury.io/js/reactlang.js)
@@ -165,3 +166,7 @@ To run the tests use the following commands:
 
  - Single run: `npm run test`
  - Run on changes: `npm run test:watch`
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Famogower%2Freactlang.js.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Famogower%2Freactlang.js?ref=badge_large)
